@@ -1,3 +1,5 @@
+import axios from "axios"
+import {useState, useEffect} from "react"
 import {Routes, Route} from "react-router-dom";
 import "./App.css"
 import Footer from "./components/Footer";
@@ -16,7 +18,7 @@ function App() {
 
         <Route path="newRecipe" element={<NewRecipeScreen />} />
 
-        <Route path="recipe/:id" element={<DetailScreen />} />
+        <Route path="/recipe/:id" element={<DetailScreen />} />
       </Routes>
       {/* This is where you will code for some of Part 1. */}
       <Footer />

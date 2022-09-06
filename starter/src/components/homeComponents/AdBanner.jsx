@@ -4,16 +4,6 @@ import { Link } from "react-router-dom";
 
 const AdBanner = () => {
   return (
-    <div
-      style={{
-        background: `linear-gradient(
-          190deg,
-          rgba(0, 0, 0, 0.8),
-          rgba(0, 0, 0, 0.8)),
-          url(${salmon})`,
-        backgroundSize: "cover",
-      }}
-    >
       <div className="ad-banner"
         style={{
           background: `linear-gradient(
@@ -32,10 +22,9 @@ const AdBanner = () => {
           garnished in butter, garlic, and chives. You won’t want to miss it!
         </h3>
         <Link to="/recipe/3">
-          <button className="check-it-out-btn">Check it out</button>
+          <button className="home-btn">Check it out</button>
         </Link>
       </div>
-    </div>
   );
 };
 

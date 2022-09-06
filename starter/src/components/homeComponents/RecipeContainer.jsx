@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import RecipeCard from "./RecipeCard";
+import RecipeCard from "../elements/RecipeCard";
 import { BiSearchAlt2 } from "react-icons/bi";
+
 
 const RecipeContainer = ({recipes}) => {
   const [search, setSearch] = useState("");
@@ -17,7 +18,7 @@ const RecipeContainer = ({recipes}) => {
 
   return (
     <section className="recipe-section">
-      <h2>Search a recipe!</h2>
+      
       <span className="search-bar">
         <BiSearchAlt2 size="2em" color="#DA7635" />
         <input
@@ -35,3 +36,4 @@ const RecipeContainer = ({recipes}) => {
 };
 
 export default RecipeContainer;
+

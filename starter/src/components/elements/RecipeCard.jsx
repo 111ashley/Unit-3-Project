@@ -1,6 +1,7 @@
-import React from 'react'
+import React from "react";
 import { Navigate } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import styles from "./RecipeCard.module.css"
 
 const RecipeCard = ({recipe}) => {
   const navigate = useNavigate()
@@ -9,18 +10,18 @@ const RecipeCard = ({recipe}) => {
     navigate(`/recipe/${recipe.recipe_id}`)
   }
   return (
-    <div className="recipe-card">
+    <div className={styles.recipe_card}>
       <div>
-        <div className="recipe-img-container">
-          <img src="img src" />
+        <div className={styles.recipe_img_container}>
+          <img src={recipe.image_url} />
           {/* <img src="https://www.atablefullofjoy.com/wp-content/uploads/2020/02/German-Chocolate-Cake-Recipe-SQUARE.jpg" /> */}
         </div>
         <h3>{recipe.recipe_name}</h3>
       </div>
-      <button className="check-it-out-btn" onClick={handleClick}>See More</button>
+      <button className="home-btn" onClick={handleClick}>See More</button>
     </div>
-    );
-  };
-  
-  export default RecipeCard;
-  
+  );
+};
+
+export default RecipeCard;
+
